@@ -96,28 +96,6 @@ class SVG:
             "height": self._viewbox_attr[3],
         }
 
-    def set_view_box(
-        self,
-        x: Number = None,
-        y: Number = None,
-        width: Number = None,
-        height: Number = None,
-    ):
-        if isNumber(x):
-            self._viewBox["x"] = str(x)
-
-        if isNumber(y):
-            self._viewBox["y"] = str(x)
-
-        if isNumber(width):
-            self._viewBox["width"] = str(width)
-
-        if isNumber(height):
-            self._viewBox["height"] = str(height)
-
-        self._viewbox_attr = " ".join(self._viewBox.values())
-        self._root.attrib["viewBox"] = self._viewbox_attr
-
     def set_sizes(self, width: Number = None, height: Number = None):
         self._root.attrib["width"] = str(width) if width else self.viewBox["widht"]
         self._root.attrib["height"] = str(height) if width else self.viewBox["height"]
