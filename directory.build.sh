@@ -21,7 +21,7 @@ do
 
 	# TODO if more flags are added change this to normal
 	if [[ "$3" == "--log" ]] || [[ "$3" == "-l" ]]; then
-		./payment_image.py $full_path $full_destination >> $log_file
+		./build_image.py $full_path $full_destination >> $log_file
 	else
 		./build_image.py $full_path $full_destination
 	fi
